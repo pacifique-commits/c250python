@@ -1,9 +1,3 @@
-import sys
-#check errors
-if len(sys.argv) <2:
-    sys.exit("Too few argument")
-
-
-#print name tag
-for arg in sys.argv[1:]:
-    print("Hello, my name is ", arg)
+with open("names.txt") as file:
+    for line in sorted(file):
+        print("Hello,",line.rstrip())
